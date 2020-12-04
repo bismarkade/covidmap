@@ -1,0 +1,111 @@
+.mapDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.info {
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  left: 15x;
+  z-index: 9000;
+  padding: 25px;
+  border-radius: 2px;
+}
+.countryInfo {
+  background-color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 15x;
+  z-index: 9000;
+  padding: 25px;
+  border-radius: 2px;
+}
+.chart {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  /*  max-height:50%; */
+  z-index: 9000;
+  padding: 15px;
+  border-radius: 2px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.buttonBar {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  z-index: 9001;
+  display: none;
+}
+.th,
+td,
+th {
+  padding: 10px;
+  text-align: right;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.globalPlus {
+  background-color: lightgrey;
+  text-align: left;
+}
+/* #main3{
+    background-color: white;
+    width: 400px;
+    height: 170px;
+    position: fixed !important;
+    right: 1000px;
+    top: 0;
+    z-index: 999;
+    padding: 25px;
+}
+
+#main2{
+    background-color: white;
+    width: 400px;
+    height: 170px;
+    position: fixed !important;
+    right: 600px;
+    top: 0;
+    z-index: 999;
+} */
+#main,
+#main2,
+#main3 {
+  background-color: white;
+  width: 300px;
+  height: 170px;
+  position: fixed !important;
+  right: 300px;
+  top: 0;
+  z-index: 999;
+}
+#main2,
+#main3 {
+  display: none;
+}
+.conbtns {
+  background-color: white;
+  width: 100px;
+  height: 170px;
+  position: fixed !important;
+  right: 600px;
+  top: 0;
+  z-index: 999;
+}
+.conbtns .btn1 {
+  width: 80px;
+  display: block;
+  margin: 20px auto;
+  line-height: 30px;
+  color: #333;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.conbtns a {
+  text-decoration: none;
+}

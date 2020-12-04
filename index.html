@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>
+        Corona Project Uni Salzburg
+    </title>
+
+    <!-- Load Open Layers Api -->
+    <script src="https://openlayers.org/en/v5.3.0/build/ol.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/ol-layerswitcher@3.0.0"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- Bootstrap styling for Popup -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Chart.js api to create charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <!-- Reference to the stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Refernce to the javascript file -->
+    <script src="./scripts/echarts.min.js"></script>
+    <script src="scripts/main.js"></script>
+
+</head>
+
+<body onload="createMap();">
+    <!-- The container for the map -->
+    <div id="mapDiv" class="mapDiv">
+        <div id="info" class='countryInfo'>Country Information</div>
+        <center>
+            <canvas id="chart" class="chart" style="display:none;">
+
+            </canvas>
+        </center>
+        <div id="totalStats" class="info" style="position:absolute;top:0px;right:0px;z-index:9002;">
+            Global Statistics
+        </div>
+        <div id="buttonBar" class="buttonBar">
+            <button type="button" id="closeChart" class="btn btn-outline-secondary"> &#10060;</button>
+            <button type="button" id="yScale" class="btn btn-outline-secondary">Logarithmic</button>
+            <!-- <button type="button" id="totalChart" class="btn btn-outline-secondary">Total</button> -->
+        </div>
+
+        <div class="mainmap" id="main"></div>
+        <div class="mainmap" id="main2"></div>
+        <div class="mainmap" id="main3"></div>
+        <div class="conbtns">
+            <a href="javascript:;" class="btn1">pie chart</a>
+            <a href="javascript:;" class="btn1">bar chart</a>
+            <a href="javascript:;" class="btn1">rate</a>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $('.btn1').on('click', function (e) {
+                var index = $(this).index();
+                if (index == 0) {
+                    $('.mainmap').eq(0).show().siblings('.mainmap').hide();
+                } else if (index == 1) {
+                    $('.mainmap').eq(1).show().siblings('.mainmap').hide();
+                } else if (index == 2) {
+                    $('.mainmap').eq(2).show().siblings('.mainmap').hide();
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
